@@ -91,11 +91,10 @@ class Student
       SELECT *
       FROM students
       WHERE students.grade = 10
+      LI
     SQL
 
-    DB[:conn].execute(sql).collect do |row|
-      self.new_from_db(new)
-    end
+    DB[:conn].execute(sql, X)
   end
 
   def self.first_student_in_grade_10
