@@ -99,8 +99,6 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      ORDER BY grade
-      WHERE id = 1
     SQL
 
     DB[:conn].execute(sql)
