@@ -103,7 +103,7 @@ class Student
     student = self.first_X_students_in_grade_10(1)
     student.map do |i|
       self.new_from_db(i)
-    end.first
+    end[0]
   end
 
   def self.all_students_in_grade_X(x)
