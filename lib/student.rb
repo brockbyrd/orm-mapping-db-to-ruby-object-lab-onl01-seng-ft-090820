@@ -100,7 +100,6 @@ class Student
       SELECT *
       FROM students
       ORDER BY grade
-      HAVING grade = 10
       WHERE id = 1
     SQL
 
