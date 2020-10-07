@@ -102,7 +102,6 @@ class Student
       ORDER BY grade
       HAVING grade = 10
       WHERE id = 1
-      LIMIT 1
     SQL
 
     DB[:conn].execute(sql)
