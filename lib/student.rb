@@ -79,10 +79,12 @@ class Student
       SELECT *
       FROM students
       GROUP BY grade
-      HAVING grade < 12
+      WHERE grade < 12
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, name).map do |row|
+      self.new_from_db(row)
+    end.first
   end
 
   def self.first_X_students_in_grade_10(x)
