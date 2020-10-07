@@ -78,6 +78,7 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
+      GROUP BY grade
       HAVING grade < 12
     SQL
 
