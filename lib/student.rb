@@ -91,7 +91,6 @@ class Student
       SELECT *
       FROM students
       WHERE students.grade = 10
-      LI
     SQL
 
     DB[:conn].execute(sql, x)
